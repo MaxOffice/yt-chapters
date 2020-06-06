@@ -1,0 +1,29 @@
+.standardsize {
+    width: 320px;
+    height: 200px;
+}
+
+iframe#video-player {
+    background-color: black;
+}
+
+#video-description {
+    display: block;
+}
+
+section#video-bar div:first-child {
+    width: 100%;
+}
+
+section#video-bar div:first-child label {
+    display: inline;
+}
+
+section#video-bar div {
+    width: 40%;
+    display: inline-block;
+}
+
+section#video-bar label {
+    display: block;
+}
