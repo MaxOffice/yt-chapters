@@ -6,6 +6,7 @@ Vue.component('video-section', {
         <div>\
             <label>Video URL/ID:</label><input type="url" v-model="videodata.currentvideoid" />\
             <button disabled="true" v-bind:disabled="videodata.godisabled" v-on:click="getvideosnippet">Go</button>\
+            <button disabled="true" v-bind:disabled="!videodata.fetched" v-on:click="clearvideodata">Clear</button>\
         </div>\
         <div>\
             <label>Video</label>\
@@ -37,6 +38,9 @@ Vue.component('video-section', {
         },
         updatevideosnippet: function() {
             this.$parent.updateVideoSnippet()
+        },
+        clearvideodata: function() {
+            this.$parent.resetVideoData()
         }
     }
 })
