@@ -4,7 +4,7 @@ Vue.component('video-section', {
     template: '\
     <section id="video-bar">\
         <div>\
-            <label>Video URL/ID:</label><input type="url" v-model="videodata.currentvideoid" />\
+            <label>Video ID:</label><input type="url" v-model="videodata.currentvideoid" />\
             <button disabled="true" v-bind:disabled="videodata.godisabled" v-on:click="getvideosnippet">Go</button>\
             <button disabled="true" v-bind:disabled="!videodata.fetched" v-on:click="clearvideodata">Clear</button>\
         </div>\
