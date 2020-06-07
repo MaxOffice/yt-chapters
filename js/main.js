@@ -80,6 +80,8 @@ var vm = new Vue({
             this.videodata.currentvideocategoryid = ""
             this.videodata.currentdescriptiontext = ""
             this.videodata.fetched = false
+
+            tocmanager.clearTOC()
         },
         getVideoSnippet: function () {
             let id = this.videodata.currentvideoid
@@ -94,6 +96,8 @@ var vm = new Vue({
                     this.videodata.currentvideotitle = result.title
                     this.videodata.currentvideocategoryid = result.categoryId
                     this.videodata.fetched = true
+
+                    tocmanager.parseTOCFormat1(this.videodata.currentdescriptiontext)
                 },
                 (err) => {
                     window.alert(err)
