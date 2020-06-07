@@ -7,8 +7,9 @@ const api = new YTAPI(APIKEY, CLIENTID)
 const tocmanager = new TOCManager()
 
 var vmdata = {
-    signindisabled: false,
-    signoutdisabled: false,
+    authdata: {
+        authorized: false
+    },
     tocdata: {
         toc: tocmanager.toc,
         "currenttime": "",
@@ -55,14 +56,11 @@ var vm = new Vue({
             this.setAuthorized(false)
         },
         setAuthorized: function (authorized) {
-            if (this.authorized === authorized) {
+            if (this.authdata.authorized === authorized) {
                 return
             }
 
-            this.authorized = authorized
-
-            this.signoutdisabled = !authorized
-            this.signindisabled = authorized
+            this.authdata.authorized = authorized
 
             this.videodata.godisabled = !authorized
 

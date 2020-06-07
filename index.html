@@ -11,9 +11,7 @@
 <body>
     <main>
         <section id="start">
-            <button id="video-signin" v-on:click="signin" v-bind:disabled="signindisabled">Sign in</button>
-            <button id="video-signout" v-on:click="signout" disabled="true" v-bind:disabled="signoutdisabled">Sign
-                Out</button>
+            <auth-button v-bind:authdata="authdata"></auth-button>
         </section>
         <video-section v-bind:videodata="videodata"></video-section>
         <toc-section v-if="videodata.fetched" v-bind:tocdata="tocdata">
@@ -22,6 +20,7 @@
 
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/authvm.js"></script>
     <script src="js/videovm.js"></script>
     <script src="js/tocvm.js"></script>
     <script src="js/ytapi.js"></script>
