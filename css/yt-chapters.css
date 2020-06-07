@@ -1,29 +1,120 @@
-.standardsize {
-    width: 320px;
-    height: 200px;
+* {
+    box-sizing: border-box;
 }
 
-iframe#video-player {
+#main {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+}
+
+header div {
+    flex: 1;
+}
+
+header div.auth {
+    text-align: right;
+}
+
+section#video {
+    display: flex;
+    flex-direction: column;
+}
+
+section#video div.videorow{
+    display: flex;
+    flex-direction: row;
+    margin: 4px 0;
+}
+
+section#video div.videocol {
+    flex: 1;
+    display: flex;
+    margin: 0 4px;
+}
+
+section#video div.videocol.head{
+    align-items: baseline;
+}
+
+section#video div.videocol iframe,
+section#video div.videocol textarea,
+section#video div.videocol label {
+    flex: 1;
+}
+
+section#video input.videoid {
+    margin: 0 0.5rem;
+}
+
+section#video iframe#video-player {
     background-color: black;
 }
 
-#video-description {
-    display: block;
+section#toc {
+    margin-top: 0.75rem;
 }
 
-section#video-bar div:first-child {
+section#toc table#toctable {
     width: 100%;
 }
 
-section#video-bar div:first-child label {
-    display: inline;
+section#toc table#toctable tbody td input, section#toc table#toctable tbody td button {
+    width: 100%;
 }
 
-section#video-bar div {
-    width: 40%;
-    display: inline-block;
+section#toc table#toctable td:first-child {
+    width: 10rem;
+    text-align: right;
 }
 
-section#video-bar label {
-    display: block;
+section#toc table#toctable th {
+    text-align: left;
+    border-bottom: 1px solid  #006ecc;
+}
+
+section#toc div.tocrow {
+    display: flex;
+    flex-direction: row;
+}
+
+section#toc div.tocrow label {
+    flex: 1;
+}
+
+button {
+    background-color: white;
+    border-color:  #006ecc;
+    border-radius: 4px;
+    color:  #006ecc;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: none;
+    border-image: none;
+}
+
+button:disabled {
+    border-color: gray;
+    color: gray;
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+
+header {
+    background-color:  #006ecc;
+    color: white;
+    padding: 0px 0.25rem;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+label {
+    font-weight: bold;
 }

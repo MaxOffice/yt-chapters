@@ -9,14 +9,21 @@
 </head>
 
 <body>
-    <main>
-        <section id="start">
-            <auth-button v-bind:authdata="authdata"></auth-button>
-        </section>
-        <video-section v-bind:videodata="videodata"></video-section>
-        <toc-section v-if="videodata.fetched" v-bind:tocdata="tocdata">
-        </toc-section>
-    </main>
+    <div id="main">
+        <header>
+            <div class="brand">
+                <h1>YT- Chapters</h1>
+            </div>
+            <div class="auth">
+                <auth-button v-bind:authdata="authdata"></auth-button>
+            </div>
+        </header>
+        <main>
+            <video-section v-bind:videodata="videodata"></video-section>
+            <toc-section v-if="videodata.fetched" v-bind:tocdata="tocdata">
+            </toc-section>
+        </main>
+    </div>
 
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

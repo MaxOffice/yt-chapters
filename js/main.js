@@ -1,5 +1,6 @@
 "use strict";
 
+// Provide your Google API Key and Client ID below
 const APIKEY = ""
 const CLIENTID = ""
 
@@ -17,7 +18,7 @@ var vmdata = {
     },
     videodata: {
         fetched: false,
-        godisabled: false,
+        godisabled: true,
         currentvideoid: "",
         currentdescriptiontext: "",
         currentvideotitle: "",
@@ -27,7 +28,7 @@ var vmdata = {
 }
 
 var vm = new Vue({
-    el: 'main',
+    el: '#main',
     data: vmdata,
     mounted: function () {
         api.init()

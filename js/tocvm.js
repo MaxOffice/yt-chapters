@@ -13,7 +13,9 @@ Vue.component('toc-item', {
 Vue.component('toc-section', {
     template: '\
     <section id="toc">\
-    <label>TOC</label><button v-on:click="updateDescription">Update Description</button>\
+    <div class="tocrow">\
+        <label>Chapters</label><button v-on:click="updateDescription">Add To Description</button>\
+    </div>\
     <table id="toctable">\
         <thead>\
             <tr>\
